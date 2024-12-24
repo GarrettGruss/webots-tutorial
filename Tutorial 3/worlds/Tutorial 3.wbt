@@ -1,0 +1,99 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/OldSteel.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.40003964757604177 0.2559332822270228 0.8800377465857584 2.116028568591928
+  position 0.8088163902735239 -1.4467210400552628 1.791848969028971
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+WoodenBox {
+  translation -0.18 -0.18 0.05
+  rotation 0 0 1 0.785398
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.34 -0.34 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0 0.36 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  controller "EPuckGoForward"
+}
+Floor {
+  size 1 1
+}
+Solid {
+  translation -0.5 0 0.05
+  children [
+    DEF Wall1 Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0.1
+      }
+      geometry Box {
+        size 0.02 1 0.1
+      }
+    }
+  ]
+  boundingObject USE Wall1
+}
+Solid {
+  translation 0.5 0 0.05
+  children [
+    USE Wall1
+  ]
+  name "solid(1)"
+  boundingObject USE Wall1
+}
+Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5707963267948968
+  children [
+    USE Wall1
+  ]
+  name "solid(2)"
+  boundingObject USE Wall1
+}
+Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5707963267948968
+  children [
+    USE Wall1
+  ]
+  name "solid(3)"
+  boundingObject USE Wall1
+}
+Solid {
+  translation 0 0 0.5
+  children [
+    DEF Sphere1 Shape {
+      appearance OldSteel {
+      }
+      geometry Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject USE Sphere1
+  physics Physics {
+  }
+}
