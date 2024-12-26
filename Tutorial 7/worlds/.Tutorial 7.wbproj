@@ -5,5 +5,5 @@ sceneTreePerspectives: 000000ff00000001000000030000002a000000c0000000fa010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "../Tutorial 6/controllers/four_wheeled_collision_avoidance/four_wheeled_collision_avoidance.java"
+textFiles: 0 "controllers/four_wheeled_collision_avoidance/four_wheeled_collision_avoidance.java"
 consoles: Console:All:All
