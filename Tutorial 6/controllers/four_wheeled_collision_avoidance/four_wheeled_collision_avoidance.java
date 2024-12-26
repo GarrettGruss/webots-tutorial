@@ -67,8 +67,8 @@ public class four_wheeled_collision_avoidance {
       }
       
       wheels[0].setVelocity(leftSpeed);
+      wheels[1].setVelocity(leftSpeed);
       wheels[2].setVelocity(rightSpeed);
-      wheels[3].setVelocity(leftSpeed);
       wheels[3].setVelocity(rightSpeed);
     };
 

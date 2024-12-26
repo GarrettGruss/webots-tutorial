@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.4491374963701022 -0.12493355924508479 -0.8846847546605238 3.624164497167761
-  position 0.9586425279226924 -0.42636375629041984 2.0980834842011338
+  orientation -0.02522079372443936 -0.0098930508010536 -0.9996329521928323 2.394440448941373
+  position 0.4736969254546838 0.5414775934274195 0.5524229079832896
 }
 TexturedBackground {
 }
@@ -112,7 +112,7 @@ Robot {
     HingeJoint {
       jointParameters HingeJointParameters {
         axis 0 1 0
-        anchor 0.05 0.06 0
+        anchor 0.06 0.06 0
       }
       device [
         RotationalMotor {
@@ -132,6 +132,7 @@ Robot {
             }
           }
         ]
+        name "Motor1"
         boundingObject USE WHEEL
         physics DEF WHEEL_PH Physics {
         }
@@ -153,7 +154,7 @@ Robot {
         children [
           USE WHEEL
         ]
-        name "solid(1)"
+        name "Motor2"
         boundingObject USE WHEEL
         physics USE WHEEL_PH
       }
